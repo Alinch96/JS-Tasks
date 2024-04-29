@@ -178,6 +178,6 @@ const account = {
    * определенного типа транзакции из всей истории транзакций
    */
     getTransactionTotal(type) {
-        return this.transactions.reduce((accamulator, transaction) => transaction.type === type ? transaction.amount : accamulator, 0);
+        return this.transactions.reduce((accamulator, transaction) => transaction.type === type ? transaction.amount + accamulator : accamulator, 0);
   },
 };
